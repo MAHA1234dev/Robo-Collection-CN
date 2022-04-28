@@ -3,7 +3,6 @@ import { Box, Button, Card, CardContent, Grid, Paper, Slider, Tabs, Typography }
 
 import EuroIcon from '@material-ui/icons/Euro'
 import React, { useEffect, useState } from "react"
-import './style.css'
 import CustomSlider from './slider/CustomSlider';
 import Car from './images/Car.png'
 import Cap from './images/Cap.png'
@@ -14,12 +13,12 @@ export default function DigitalCollectionExecutiopnDetails() {
         {
 
             media: "All",
-            count: 3567
+            count: "3,567"
         },
         {
 
             media: "SMS",
-            count: 1467
+            count: "1,467"
         },
         {
 
@@ -55,7 +54,7 @@ export default function DigitalCollectionExecutiopnDetails() {
         {
             name: "Mahadev",
             color: "red",
-            place: "AHMEDABAD",
+            place: "New Delhi",
             amount: "58,734",
             icon: "home"
         },
@@ -212,7 +211,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                                                     </svg>
                                                 </Typography>
                                             </div>
-                                            <Typography className='px-2 text-muted' style={{ marginTop: "-3%", fontSize: "75%" }}>
+                                            <Typography className='px-2 text-muted' style={{ marginTop: "-3%", fontSize: "75%",}}>
                                                 {val.place}
                                             </Typography>
                                             <hr />
@@ -313,73 +312,73 @@ export default function DigitalCollectionExecutiopnDetails() {
                 {
                     isActivity === "Summary" ? (
                         <>
-                            <Box style={{ backgroundColor: "white", margin: "2% 2% 2% 2%", padding: "4% 1% 4% 1%" }}>
+                            <Box style={{ backgroundColor: "white", margin: "2% 2% 2% 2%", padding: "5% 1% 2% 1%" }}>
                                 <CustomSlider />
                             </Box>
                             <Paper style={{ margin: "2%", display: "flex" }}>
                                 <div style={{ width: "50%" }}>
 
-                                    <div style={{ display: "flex", padding: "0% 4% 0% 4%", marginTop: "3%" }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                    <div style={{ display: "flex",padding: "0% 4% 0% 4%", marginTop: "3%" }}>
+                                        <div className='col-6 ' style={{color:"#919598",}} >
+                                            Unique Ref Number
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            LNBH00004567f
                                         </div>
                                     </div>
                                     <div className='mx-3' >
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}}>
+                                           Customer Name
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                           Koshi kurian
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}} >
+                                            Product
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                           Car Loan
                                         </div>
                                     </div>
                                     <div className='mx-3' >
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}} >
+                                           EMI 
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            45566
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}}>
+                                           Segment
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            Car Loan
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}} >
+                                            Customer Age
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            24
                                         </div>
                                     </div>
 
@@ -388,66 +387,66 @@ export default function DigitalCollectionExecutiopnDetails() {
 
                                 <div style={{ width: "50%", }}>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", marginTop: "3%" }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6' style={{color:"#919598"}} >
+                                            Customer Id
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            LNGHBD888004
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'  style={{color:"#919598"}} >
+                                            Branch
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            Ahmedabad
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6' style={{color:"#919598"}} >
+                                            Tenure
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            27 Months
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6 ' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6' style={{color:"#919598"}} >
+                                            Cycle
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                           4
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6'style={{color:"#919598"}} >
+                                            Gender
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjkl  DSVFGDF
+                                            Male
                                         </div>
                                     </div>
                                     <div className='mx-3' >
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 4% 4%" }}>
-                                        <div className='col-6' >
-                                            Unique Ref Number  OF
+                                        <div className='col-6' style={{color:"#919598"}}>
+                                            Email
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            asdfdfghjk
+                                            mnedode56@gmail.com
                                         </div>
                                     </div>
                                 </div>

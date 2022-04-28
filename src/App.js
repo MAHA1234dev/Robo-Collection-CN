@@ -1,9 +1,8 @@
-import './App.css';
 import DigitalCollectionExecutiopnDetails from './components/DigitalCollectionExecutiopnDetails';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <DigitalCollectionExecutiopnDetails/>
     </div>
   );
