@@ -24,27 +24,32 @@ function AccordionMuI() {
             status: "Sent"
         },
         {
-            date: "11 Nov 2021",
+            date: "10 Nov 2021",
             time: "12:06 PM",
             status: "Pending"
         },
         {
-            date: "11 Nov 2021",
+            date: "9 Nov 2021",
             time: "12:06 PM",
             status: "Sent"
         },
         {
-            date: "11 Nov 2021",
+            date: "10 Nov 2021",
             time: "12:06 PM",
             status: "Sent"
         },
         {
-            date: "11 Nov 2021",
+            date: "8 Nov 2021",
             time: "12:06 PM",
             status: "Cancelled"
         },
         {
-            date: "11 Nov 2021",
+            date: "6 Nov 2021",
+            time: "12:06 PM",
+            status: "Pending"
+        },
+        {
+            date: "12 Nov 2021",
             time: "12:06 PM",
             status: "Pending"
         },
@@ -55,13 +60,13 @@ function AccordionMuI() {
     const changeState = (panel) => (e, newValue) => {
         setcurrent(newValue ? panel : -1);
     };
-    const toggleClick = (id) => {
-        console.log(id);
+    const toggleClick = (status) => {
+        console.log(status);
     }
     return (
         <>
-            <div style={{}}>
-                <div style={{ width: "100%" }}>
+            <div>
+                <div style={{ width: "" }}>
                     {
                         emailsData.map((val, index) => {
                             return (
@@ -75,15 +80,15 @@ function AccordionMuI() {
                                                     marginLeft: "auto",
                                                     padding: "2px 3px 2px 3px",
                                                     borderRadius: "10%",
-                                                    backgroundColor: `${val.status === "Sent" ? "#E5FCE1" : val.status === "Pending" ? "#F8DBB4" : "#eff1f1"}`,
-                                                    color: `${val.status === "Sent" ? "green" : val.status === "Pending" ? "#F3981C" : "#919598"}`
+                                                    backgroundColor: `${val.status === "Sent" ? "#eaf9e8" : val.status === "Pending" ? "#fff5eb" : "#f8f8f8"}`,
+                                                    color: `${val.status === "Sent" ? "#5ccd5a" : val.status === "Pending" ? "#f99b2b" : "#c0c2c1"}`,
                                                 }}>
                                                 {val.status}
                                             </div>
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             <div>
-                                                <div className="d-flex" style={{ width: "925px", marginTop: "-2%" }}>
+                                                <div className="d-flex" style={{ width: "97%", marginTop: "-2%" }}>
                                                     <Card className="col-4" style={{ backgroundColor: "#f8f9f9", borderRadius: "4%", }}>
                                                         <Typography className='px-2 text-muted' style={{ marginTop: "3%", fontSize: "85%" }}>
                                                             Reference
@@ -110,7 +115,7 @@ function AccordionMuI() {
                                                         </Typography>
                                                     </Card>
                                                 </div>
-                                                <div className="d-flex" style={{ width: "925px", marginTop: "1%" }}>
+                                                <div className="d-flex" style={{ width: "97%", marginTop: "1%" }}>
                                                     <Card className="col-4" style={{ backgroundColor: "#f8f9f9", borderRadius: "4%", }}>
                                                         <div style={{ display: "flex" }}>
                                                             <Typography className='px-2 text-muted' style={{ marginTop: "3%", fontSize: "85%" }}>
@@ -120,7 +125,6 @@ function AccordionMuI() {
                                                                 Positive
                                                             </Typography>
                                                         </div>
-                                                        {/* <IconSlider /> */}
                                                         <div className="d-flex mx-2">
                                                             <div>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-emoji-frown" viewBox="0 0 16 16">
@@ -129,9 +133,9 @@ function AccordionMuI() {
                                                                 </svg>
                                                             </div>
                                                             <div className="mx-3 w-75">
-                                                                <IconSlider/>
+                                                                <IconSlider />
                                                             </div>
-                                                            <div style={{marginLeft: "auto"}}>
+                                                            <div style={{ marginLeft: "auto" }}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-emoji-frown" viewBox="0 0 16 16">
                                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                                     <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
@@ -171,15 +175,11 @@ function AccordionMuI() {
                                                             payment link https://creditnirvana.ai/online-payment For any clarification, reach us on 1800-102-1021 or visit us at
                                                             https://creditnirvana.ai for payment. Ignore if already paid - Credit Nirvana
                                                         </Typography>
-
                                                     </Card>
                                                 </div>
                                             </div>
-
-
                                         </AccordionDetails>
                                     </Accordion>
-
                                 </>
                             )
                         })

@@ -1,8 +1,5 @@
 import React from "react"
 import { Button, Slider, styled, } from '@material-ui/core'
-import { Tooltip } from "@material-ui/core";
-import PropTypes from 'prop-types';
-
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 
 export default function CustomSlider() {
@@ -22,7 +19,8 @@ export default function CustomSlider() {
             height: 24,
             width: 24,
             backgroundColor: 'gold',
-            border: '3px solid #FAFAF4',
+            // backgroundColor:`${ value[0] < 40  ? "gold" : "red" }`,
+            border: '3px solid #FAFAF4', 
             marginTop: -8,
             marginLeft: -12,
             textShadow: "none"
@@ -41,14 +39,14 @@ export default function CustomSlider() {
             height: 8,
             borderRadius: 4,
             // background: "linear-gradient(to right,hsl(60deg 100% 50%),hsl(60,100%,50%),hsl(60deg 100% 50%),#f50057,#f50057,#f50057,hsl(360,100%,50%))"
-            background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            background: "linear-gradient(to right, #e8ce05 0%, #f76735 100%)"
 
         },
         rail: {
             height: 8,
             borderRadius: 4,
             // background: "linear-gradient(to right,hsl(60deg 100% 50%),hsl(60,100%,50%),hsl(60deg 100% 50%),hsl(60deg 100% 50%),hsl(60deg 100% 50%),#ff0018,hsl(0deg 100% 52%))"
-            background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            background: "linear-gradient(to right, #e8ce05 0%, #f76735 100%)"
         },
 
     })(Slider)
@@ -87,25 +85,23 @@ export default function CustomSlider() {
             scaledValue /= 100;
         }
         return <div>
-            <span>
+            <span style={{color:"black",fontSize:"13px",fontWeight:"bold"}}>
                 {scaledValue}
             </span>
-            <span className="mx-1">
+            <span className="mx-1"  style={{color:"black",fontSize:"13px",fontWeight:"bold"}}>
                 {units[unitIndex]}
             </span>
-            <span>
+            <span style={{color:"black", fontSize:"13px",fontWeight:"bold"}}>
                 {months}
             </span>
         </div>
-         
+
         {/* {`${scaledValue} ${units[unitIndex]}`} */ }
     }
-    const handleChange = (e) => {
-        console.log(e,"sdcsd");
+    const handleChange = (val) => {
+        console.log(val, "ava");
     }
     return (
-
-
         <div className="App">
             <div className={classes.horizontal}>
                 <CustomSlider
@@ -114,14 +110,11 @@ export default function CustomSlider() {
                     aria-labelledby="non-linear-slider"
                     getAriaValueText={valueLabelFormat}
                     valueLabelFormat={valueLabelFormat}
-                    onChange={(e)=>{handleChange(e)}}
+                    onChange={(e, value) => { handleChange(value) }}
                 // ValueLabelComponent={valueLabelComponent}
                 />
             </div>
         </div>
-
-
-
     )
 }
 

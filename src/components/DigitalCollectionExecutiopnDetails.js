@@ -1,13 +1,13 @@
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { Box, Button, Card, CardContent, Grid, Paper, Slider, Tabs, Typography } from '@material-ui/core';
-
-import EuroIcon from '@material-ui/icons/Euro'
 import React, { useEffect, useState } from "react"
 import CustomSlider from './slider/CustomSlider';
 import Car from './images/Car.png'
 import Cap from './images/Cap.png'
 import Home from './images/Home.png'
+import rupee from './images/icons/rupee.png'
 import TrailHistory from './activities/TrailHistory';
+import CustomizedCheckbox from './checkBox/CustomizedCheckbox';
 export default function DigitalCollectionExecutiopnDetails() {
     const actions = [
         {
@@ -52,35 +52,35 @@ export default function DigitalCollectionExecutiopnDetails() {
     ];
     const details = [
         {
-            name: "Mahadev",
+            name: "Deshmukh Dairy Milk",
             color: "red",
             place: "New Delhi",
             amount: "58,734",
             icon: "home"
         },
         {
-            name: "Yash",
+            name: "Vaishnavi Caterers",
             color: "green",
             place: "PUNE",
             amount: " 1,12,234",
             icon: "car"
         },
         {
-            name: "shubham",
+            name: "Mr Surinder Kumar",
             color: "red",
             place: "BANGALORE",
             amount: "23,42,355",
             icon: "school"
         },
         {
-            name: "sachin",
+            name: "Jain Warehousing",
             color: "blue",
             place: "HYDRABAD",
             amount: "98,76,776",
             icon: "home"
         },
         {
-            name: "yash",
+            name: "Mr Surinder Kumar",
             color: "green",
             place: "NEW DELHI",
             amount: " 1,12,234",
@@ -125,6 +125,7 @@ export default function DigitalCollectionExecutiopnDetails() {
 
     const carImage = Car
     const homeImg = Home
+    const rupeeeIcon = rupee
     const capImg = Cap
     const [axctionColor, setActionColor] = useState('')
     const [finalData, setFinalData] = useState([])
@@ -149,12 +150,20 @@ export default function DigitalCollectionExecutiopnDetails() {
     }
     return (
         <div className="d-flex " style={{ width: "100%" }}>
-            <div className=' border border-secondary' style={{ width: "24%", marginLeft: "1%", height: '100vh', overflowY: 'scroll' }}>
-                <div className="d-flex mt-4 mx-2">
+            <div className='' style={{ width: "24%", height: '100vh', overflowY: 'scroll', margin: "0 0 0 5px" }}>
+                <div className="d-flex mt-4 mx-3 ">
                     <div>
-                        <ChevronLeftIcon style={{ color: 'blue' }} />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="blue"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="7" r="7" />
+                            <ChevronLeftIcon style={{ color: 'white', marginLeft: "-52%", fontSize: "40px" }} />
+
+                        </svg>
                     </div>
-                    <h5 className=''>
+                    <h5 style={{ marginLeft: "2%" }}>
                         Robo collection actions
                     </h5>
 
@@ -190,60 +199,58 @@ export default function DigitalCollectionExecutiopnDetails() {
                         }
                     </Tabs>
                 </Box>
-                <div style={{ margin: "0 5% 0 5%" }}>
-                    <div className='mx-2'>
-                        {
-                            detailsData.map((val, index) => {
-                                return (
-                                    <>
-                                        <Card style={{ marginTop: "5%", backgroundColor: "#f8f9f9", borderRadius: "1%", }}>
-                                            <div className='d-flex bd-highlight'>
-                                                <Typography className='p-2 flex-grow-1' style={{ fontWeight: "bold", fontSize: "95%" }}>
-                                                    {val.name}
-                                                </Typography>
-                                                <Typography className='p-2'>
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        width="13"
-                                                        height="13"
-                                                        fill={`${val.color === "red" ? "red" : val.color === "blue" ? "blue" : "green"}`}
-                                                        class="bi bi-circle-fill" viewBox="0 0 16 16">
-                                                        <circle cx="8" cy="7" r="7" />
-                                                    </svg>
-                                                </Typography>
-                                            </div>
-                                            <Typography className='px-2 text-muted' style={{ marginTop: "-3%", fontSize: "75%",}}>
-                                                {val.place}
+                <div style={{ margin: "0 6% 5% 6%" }}>
+                    {
+                        detailsData.map((val, index) => {
+                            return (
+                                <>
+                                    <Card style={{ marginTop: "5%", backgroundColor: "#f8f9f9", borderRadius: "1%", }}>
+                                        <div className='d-flex bd-highlight mx-2 mt-1'>
+                                            <Typography className='p-2 flex-grow-1' style={{ fontWeight: "bold", fontSize: "95%" }}>
+                                                {val.name}
                                             </Typography>
-                                            <hr />
-                                            <div className='d-flex bd-highlight mb-3'>
-                                                <Typography className='flex-grow-1 mx-2'>
-                                                    {
-                                                        val.icon === "home" ? <img src={homeImg} height="24px" width="24px" ></img>
+                                            <Typography className='p-2'>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="13"
+                                                    height="13"
+                                                    fill={`${val.color === "red" ? "#fe4646" : val.color === "blue" ? "#8b63ff" : "#57cf57"}`}
+                                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                                    <circle cx="8" cy="7" r="7" />
+                                                </svg>
+                                            </Typography>
+                                        </div>
+                                        <Typography className='px-2 text-muted mx-2' style={{ marginTop: "-3%", fontSize: "75%", }}>
+                                            {val.place}
+                                        </Typography>
+                                        <hr />
+                                        <div className='d-flex bd-highlight mb-3 mx-2'>
+                                            <Typography className='flex-grow-1 mx-2'>
+                                                {
+                                                    val.icon === "home" ? <img src={homeImg} height="24px" width="24px" ></img>
 
-                                                            : val.icon === "car" ? <img src={carImage} height="24px" width="24px" ></img> :
-                                                                val.icon === "school" ? <img src={capImg} height="24px" width="24px" ></img> : ""
-                                                    }
+                                                        : val.icon === "car" ? <img src={carImage} height="24px" width="24px" ></img> :
+                                                            val.icon === "school" ? <img src={capImg} height="24px" width="24px" ></img> : ""
+                                                }
 
+                                            </Typography>
+                                            <div className='d-flex mx-2'>
+                                                <Typography>
+                                                    <img src={rupeeeIcon} height="15px" width="15px" ></img>
                                                 </Typography>
-                                                <div className='d-flex mx-2'>
-                                                    <Typography>
-                                                        <EuroIcon fontSize="inherit" />
-                                                    </Typography>
-                                                    <Typography className='' style={{ fontWeight: "bold" }} >
-                                                        {val.amount}
-                                                    </Typography>
-                                                </div>
+                                                <Typography style={{ fontWeight: "bold" }} >
+                                                    {val.amount}
+                                                </Typography>
                                             </div>
-                                        </Card>
-                                    </>
-                                )
-                            })
-                        }
-                    </div>
+                                        </div>
+                                    </Card>
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
 
-            <div className=" border border-primary " style={{ width: "76%", backgroundColor: "#F8F9F9", height: '100vh', overflowY: 'scroll', overflowX: "hidden" }}>
+            <div style={{ width: "76%", backgroundColor: "#F8F9F9", height: '100vh', overflowY: 'scroll', overflowX: "hidden" }}>
 
                 <div
                     className='row mt-3'
@@ -252,7 +259,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                     <div
                         className='col-1'
                     >
-                        <div className='' style={{ height: "55px", width: "60px", borderRadius: "15px", backgroundColor: "#FFE12B" }}  >
+                        <div className='' style={{ height: "50px", width: "55px", borderRadius: "15px", backgroundColor: "#ffdc64" }}  >
                             <img src={carImage} height="15px" width="20px" style={{ margin: '8px 0px 0px 7px', width: "45px", height: "35px" }}></img>
                         </div>
                     </div>
@@ -260,33 +267,32 @@ export default function DigitalCollectionExecutiopnDetails() {
                         className='col-2'
                     >
                         <Typography
-                            className='' style={{ fontWeight: "bold", fontSize: "95%" }}
+                            style={{ fontWeight: "bold", fontSize: "98%", marginLeft: "-6%" }}
                         > Mahadev Nidode</Typography>
-                        <Typography className='text-muted'>MLKJN5679POUUY</Typography>
+                        <Typography className='text-muted' style={{ fontSize: "80%", margin: "3% 0 0 -6%" }}>LNBLAMR000051458</Typography>
                     </div>
                     <div
                         className=' col-9 d-dlex' style={{ textAlign: 'end', marginRight: "" }}
                     >
                         <span>
-                            <EuroIcon fontSize="inherit" />
+                            <img src={rupeeeIcon} height="15px" width="15px" ></img>
                         </span>
-                        <span className='' style={{ fontWeight: "bold", fontSize: "95%" }}>
+                        <span style={{ fontWeight: "bold", fontSize: "99%" }}>
                             98,71,67,67,68,687
                         </span>
 
-                        <Typography className='text-muted'>LOITXVG78955LOK</Typography>
+                        <Typography className='text-muted' style={{ fontSize: "80%", marginTop: "1%" }}>LOITXVG78955LOK</Typography>
 
                     </div>
                 </div>
 
-                <Box style={{ margin: "0% 0% 0 0%", backgroundColor: "#EBEDEF", padding: "2% 0 2% 0" }}>
+                <Box style={{ margin: "0% 0% 0% 0%", backgroundColor: "#EBEDEF", padding: "2% 0 2% 0" }}>
                     <Tabs
                         variant="scrollable"
                         aria-label="scrollable auto tabs example"
                         disableFocusRipple={false}
                         textColor="primary"
                         scrollButtons={false}
-
                     >
                         {
                             activityData.map((val, index) => {
@@ -294,12 +300,13 @@ export default function DigitalCollectionExecutiopnDetails() {
                                     <div className='my-1' style={{ marginLeft: `${index === 0 ? "2%" : "1%"}` }}>
                                         <Button onClick={() => handleClick(index, val.activity)}
                                             style={{
-                                                color: bgColor === index ? "#0A0A09" : "#919598",
+                                                color: bgColor === index ? "#2a2815" : "#8b8f92",
                                                 borderRadius: "6px",
-                                                backgroundColor: bgColor === index ? "#FFE12B" : "#FBFCFC",
+                                                backgroundColor: bgColor === index ? "#ffdc64" : "#FBFCFC",
                                                 textTransform: "capitalize"
                                             }}
-                                            variant="contained" >
+                                            variant="contained" 
+                                            >
 
                                             {val.activity}
                                         </Button>
@@ -318,8 +325,8 @@ export default function DigitalCollectionExecutiopnDetails() {
                             <Paper style={{ margin: "2%", display: "flex" }}>
                                 <div style={{ width: "50%" }}>
 
-                                    <div style={{ display: "flex",padding: "0% 4% 0% 4%", marginTop: "3%" }}>
-                                        <div className='col-6 ' style={{color:"#919598",}} >
+                                    <div style={{ display: "flex", padding: "0% 4% 0% 4%", marginTop: "3%" }}>
+                                        <div className='col-6 ' style={{ color: "#919598", }} >
                                             Unique Ref Number
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -330,41 +337,46 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'  style={{color:"#919598"}}>
-                                           Customer Name
+                                        <div className='col-6' style={{ color: "#919598" }}>
+                                            Customer Name
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                           Koshi kurian
+                                            Koshi kurian
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'  style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Product
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                           Car Loan
+                                            Car Loan
                                         </div>
                                     </div>
                                     <div className='mx-3' >
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'  style={{color:"#919598"}} >
-                                           EMI 
+                                        <div className='col-6' style={{ color: "#919598" }} >
+                                            EMI
                                         </div>
-                                        <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                            45566
+                                        <div className='col-6' style={{ textAlign: "end", }}>
+                                            <span>
+                                                <img src={rupeeeIcon} height="15px" width="15px" ></img>
+                                            </span>
+                                            <span style={{ fontFamily: "sans-serif open", fontWeight: "bold" }}>
+                                                45566
+                                            </span>
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'  style={{color:"#919598"}}>
-                                           Segment
+                                        <div className='col-6' style={{ color: "#919598" }}>
+                                            Segment
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
                                             Car Loan
@@ -374,7 +386,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'  style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Customer Age
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -387,7 +399,7 @@ export default function DigitalCollectionExecutiopnDetails() {
 
                                 <div style={{ width: "50%", }}>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", marginTop: "3%" }}>
-                                        <div className='col-6' style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Customer Id
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -398,7 +410,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6'  style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Branch
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -409,7 +421,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6' style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Tenure
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -420,18 +432,18 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%", }}>
-                                        <div className='col-6' style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Cycle
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
-                                           4
+                                            4
                                         </div>
                                     </div>
                                     <div className='mx-3'>
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 0% 4%" }}>
-                                        <div className='col-6'style={{color:"#919598"}} >
+                                        <div className='col-6' style={{ color: "#919598" }} >
                                             Gender
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -442,7 +454,7 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         <hr />
                                     </div>
                                     <div style={{ display: "flex", padding: "0% 4% 4% 4%" }}>
-                                        <div className='col-6' style={{color:"#919598"}}>
+                                        <div className='col-6' style={{ color: "#919598" }}>
                                             Email
                                         </div>
                                         <div className='col-6' style={{ textAlign: "end", fontFamily: "sans-serif open", fontWeight: "bold" }}>
@@ -450,7 +462,6 @@ export default function DigitalCollectionExecutiopnDetails() {
                                         </div>
                                     </div>
                                 </div>
-
                             </Paper>
                         </>
                     ) : (

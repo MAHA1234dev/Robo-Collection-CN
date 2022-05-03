@@ -12,7 +12,6 @@ export default function IconSlider() {
         }
     })
 
-
     const CustomSlider = withStyles({
         root: {
             height: 4,
@@ -20,9 +19,9 @@ export default function IconSlider() {
         thumb: {
             height: 14,
             width: 14,
-            backgroundColor: 'gold',
+            backgroundColor: 'green',
             border: '3px solid #FAFAF4',
-            marginTop: -5,
+            marginTop: -4,
             marginLeft: -12,
             textShadow: "none"
         },
@@ -40,23 +39,21 @@ export default function IconSlider() {
             height: 6,
             borderRadius: 4,
             // background: "linear-gradient(to right,hsl(60deg 100% 50%),hsl(60,100%,50%),hsl(60deg 100% 50%),#f50057,#f50057,#f50057,hsl(360,100%,50%))"
-            background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            // background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            background: "linear-gradient(to right, #ef5443 36%, #71b94e 74%)"
 
         },
         rail: {
             height: 6,
             borderRadius: 4,
             // background: "linear-gradient(to right,hsl(60deg 100% 50%),hsl(60,100%,50%),hsl(60deg 100% 50%),hsl(60deg 100% 50%),hsl(60deg 100% 50%),#ff0018,hsl(0deg 100% 52%))"
-            background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            // background: "linear-gradient(to right, #ffff00 0%, #ff0000 100%)"
+            background: "linear-gradient(to right, #ef5443 0%, #71b94e 100%)"
         },
-
     })(Slider)
 
-    // const value = [
-    //     5, 70, 97
-    // ]
-
     const classes = useStyles()
+
     return (
         < div className="App" >
             <div className={classes.horizontal}>
@@ -64,10 +61,8 @@ export default function IconSlider() {
                     defaultValue={100}
                     valueLabelDisplay="off"
                     aria-labelledby="non-linear-slider"
-
                 />
             </div>
         </div >
     )
 }
-
