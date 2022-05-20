@@ -1,9 +1,13 @@
 import DigitalCollectionExecutiopnDetails from './components/DigitalCollectionExecutiopnDetails';
+import Calender from './components/eventcalender/Calender';
+import Practice from './components/sivaji/Practice';
 
 function App() {
   return (
     <div>
-      <DigitalCollectionExecutiopnDetails/>
+      {/* <DigitalCollectionExecutiopnDetails/> */}
+      {/* <Practice/> */}
+      <Calender/>
     </div>
   );
 }
