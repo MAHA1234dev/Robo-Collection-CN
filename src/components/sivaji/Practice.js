@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function Practice() {
-    const [object, setObject] = useState(
+    const object =
         [
             {
                 name: 'sivaji',
@@ -18,33 +18,39 @@ function Practice() {
                 age: '13',
             },
         ]
-    );
-    const [index, setIndex] = useState([])
+
+    const [indexVlaue, setIndexValue] = useState([]);
+    const [data, setData] = useState([])
+    useEffect(() => {
+        setData(object)
+    }, [])
     const handleClick = (ele, ind) => {
-        setIndex([...index, ind])
+        setIndexValue([...indexVlaue, ind])
         // if(index.includes(ind)){
         //     index.splice(ind, 0)
         // }
     }
     useState(() => {
         axios.get('https://www.cloudflare.com/cdn-cgi/trace').then((res) => {
-            
-            console.log(res.data.split('/'));
+            // console.log(res.data.slice(34,50));
             // console.log(res, "res");
         })
     }, [])
     return (
         <div>
-            {
-                object.map((ele, ind) => {
-                    return <div>
-                        <input type='text'
-                            disabled={index.includes(ind)}
-                        />
-                        <button onClick={() => handleClick(ele, ind)} >click </button>
-                    </div>
-                })
-            }
+            <>
+                {
+                    data.map((ele, ind) => {
+                        return <div key={ind}>
+                            <input type='text'
+                                disabled={indexVlaue.includes(ind)}
+                            />
+                            <button onClick={() => handleClick(ele, ind)} >click </button>
+                        </div>
+                    })
+                }
+            </>
+
         </div>
     )
 }

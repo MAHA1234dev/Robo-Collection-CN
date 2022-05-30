@@ -37,9 +37,11 @@ export default class Events extends SampleBase {
     this.appendElement('Schedule <b>Action Failure</b> event is triggered<hr>');
   }
   onCellDoubleClick() {
+    debugger
     this.appendElement('SChedule <b>Cell Double Click</b> event is triggered<hr>');
   }
   onCellClick() {
+    debugger
     this.appendElement('Schedule <b>Cell Click</b> event is triggered<hr>');
   }
   onNavigating() {
@@ -49,11 +51,13 @@ export default class Events extends SampleBase {
     this.appendElement('Schedule <b>Destroyed</b> event is triggered<hr>');
   }
   onEventClick() {
+    debugger
     this.appendElement('Schedule <b>Event Click</b> event is triggered<hr>');
   }
-  onPopupOpen() {
-    this.appendElement('Schedule <b>Popup Open</b> event is triggered<hr>');
-  }
+  // onPopupOpen() {
+  //   debugger
+  //   this.appendElement('Schedule <b>Popup Open</b> event is triggered<hr>');
+  // }
   appendElement(html) {
     let span = document.createElement('span');
     span.innerHTML = html;
@@ -103,14 +107,14 @@ export default class Events extends SampleBase {
                 actionBegin={this.onActionBegin.bind(this)}
                 actionComplete={this.onActionComplete.bind(this)}
                 actionFailure={this.onActionFailure.bind(this)}
-                cellClick={this.onCellClick.bind(this)}
-                cellDoubleClick={this.onCellDoubleClick.bind(this)}
+                // cellClick={this.onCellClick.bind(this)}
+                // cellDoubleClick={this.onCellDoubleClick.bind(this)}
                 destroyed={this.onDestroyed.bind(this)}
                 navigating={this.onNavigating.bind(this)}
                 eventClick={this.onEventClick.bind(this)}
-                popupOpen={this.onPopupOpen.bind(this)}
+                // popupOpen={this.onPopupOpen.bind(this)}
               >
-                <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]} />
+                <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop, ]} />
               </ScheduleComponent>
             </div>
           </div>
