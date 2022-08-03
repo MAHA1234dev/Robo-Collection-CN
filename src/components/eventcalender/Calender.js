@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import '../../../src/index.css'
+import '../../index.css'
 import { PropertyPane } from './property-pane';
 import { SampleBase } from './sample-base';
 import { applyCategoryColor } from './helper';
@@ -7,6 +7,41 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, 
 import dataSource from './dataSource.json';
 import { extend } from "@syncfusion/ej2-base";
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  cardDiv: {
+    [theme.breakpoints.up('xs')]: {
+      marginTop: "1.8rem",
+      marginBottom: "0.8rem",
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: "100%",
+      borderRadius: "none",
+      boxShadow: "80px",
+      height: "28vh",
+      marginTop: "1.8rem",
+      marginBottom: "1.8rem"
+    },
+    [theme.breakpoints.between("md", "lg")]: {
+      width: "32.4%",
+      borderRadius: "none",
+      height: "28vh",
+      marginTop: "0.8rem",
+      marginBottom: "1.6rem"
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: "24%",
+      borderRadius: "none",
+      boxShadow: "80px",
+      height: "28vh",
+      marginTop: "1.8rem",
+      marginBottom: "1.8rem"
+    }
+  },
+
+}));
+
 
 export default class Events extends SampleBase {
   constructor(props) {
@@ -112,9 +147,9 @@ export default class Events extends SampleBase {
                 destroyed={this.onDestroyed.bind(this)}
                 navigating={this.onNavigating.bind(this)}
                 eventClick={this.onEventClick.bind(this)}
-                // popupOpen={this.onPopupOpen.bind(this)}
+              // popupOpen={this.onPopupOpen.bind(this)}
               >
-                <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop, ]} />
+                <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop,]} />
               </ScheduleComponent>
             </div>
           </div>

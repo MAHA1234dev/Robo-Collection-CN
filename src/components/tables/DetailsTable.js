@@ -35,7 +35,7 @@ export default function DetailsTable() {
         <div>
             <TableContainer component={Paper}>
                 <Table sx={{}} aria-label="simple table">
-                    {/* <TableHead>
+                    <TableHead>
                         <TableRow>
                             <TableCell>Dessert</TableCell>
                             <TableCell align="right">Calories</TableCell>
@@ -43,7 +43,7 @@ export default function DetailsTable() {
                             <TableCell align="right">Carbs&nbsp;(g)</TableCell>
                             <TableCell align="right">Protein&nbsp;(g)</TableCell>
                         </TableRow>
-                    </TableHead> */}
+                    </TableHead>
                     <TableBody>
                         {rows.map((row) => (
                             <TableRow
