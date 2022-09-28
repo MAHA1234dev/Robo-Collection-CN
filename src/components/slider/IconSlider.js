@@ -55,7 +55,7 @@ export default function IconSlider() {
     const classes = useStyles()
 
     return (
-        < div className="App" >
+        <div className="App">
             <div className={classes.horizontal}>
                 <CustomSlider
                     defaultValue={100}
@@ -63,6 +63,6 @@ export default function IconSlider() {
                     aria-labelledby="non-linear-slider"
                 />
             </div>
-        </div >
+        </div>
     )
 }

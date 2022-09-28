@@ -38,10 +38,10 @@ export default function DetailsTable() {
                     <TableHead>
                         <TableRow>
                             <TableCell>Dessert</TableCell>
-                            <TableCell align="right">Calories</TableCell>
-                            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                            <TableCell align="">Calories</TableCell>
+                            <TableCell align="">Fat&nbsp;(g)</TableCell>
+                            <TableCell align="">Carbs&nbsp;(g)</TableCell>
+                            <TableCell align="">Protein&nbsp;(g)</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

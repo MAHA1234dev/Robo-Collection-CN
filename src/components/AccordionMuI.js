@@ -57,12 +57,15 @@ function AccordionMuI() {
     useEffect(() => {
         setEmailsData(emails)
     }, [])
+
     const changeState = (panel) => (e, newValue) => {
         setcurrent(newValue ? panel : -1);
     };
+
     const toggleClick = (status) => {
         console.log(status);
     }
+    
     return (
         <>
             <div>
@@ -142,10 +145,7 @@ function AccordionMuI() {
                                                                 </svg>
                                                             </div>
                                                         </div>
-
-
                                                     </Card>
-
                                                     <Card className="col-4" style={{ backgroundColor: "#f8f9f9", borderRadius: "4%", marginLeft: "1%" }}>
                                                         <Typography className='px-2 text-muted' style={{ marginTop: "3%", fontSize: "85%" }}>
                                                             Reasons
@@ -162,7 +162,6 @@ function AccordionMuI() {
                                                             surikr@gmail.com
                                                         </Typography>
                                                     </Card>
-
                                                 </div>
                                                 <div style={{ marginTop: "1%" }}>
                                                     <Card className="" style={{ backgroundColor: "#f8f9f9", borderRadius: "4%", marginLeft: "" }}>

@@ -67,7 +67,7 @@ export default function CastomCalendar() {
 
     const [currentMonth, setCurrentMonth] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(new Date());
-    console.log(currentMonth);
+    
     const renderHeader = () => {
         const dateFormat = "dd MMMM yyyy";
         return (

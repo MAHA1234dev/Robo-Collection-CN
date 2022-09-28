@@ -10,10 +10,13 @@ import CustomPicker from './components/datePicker/CustomPicker';
 import SearchDropdown from './components/SearchDropDown';
 import DetailsTable from './components/tables/DetailsTable';
 import ColumnsGroupingTable from './components/tables/ColumnsGroupingTable';
+import Firebase from './components/firebase';
+// import HtmlDropDown from './components/dropdownwithicon/htmlDropdown';
+
 function App() {
   return (
     <div className='App'>
-        {/* <header>
+      {/* <header>
           <div id="logo">
             <span className="icon">date_range</span>  
             <span>
@@ -24,7 +27,8 @@ function App() {
         <main>
           <CustomCalendar/>
         </main> */}
-      <DigitalCollectionExecutiopnDetails/>
+      <DigitalCollectionExecutiopnDetails />
+      {/* <HtmlDropDown /> */}
       {/* <Practice/> */}
       {/* <Events/> */}
       {/* <CustomCalendar/> */}
@@ -34,6 +38,7 @@ function App() {
       {/* <SearchDropdown/> */}
       {/* <DetailsTable/> */}
       {/* <ColumnsGroupingTable/> */}
+      {/* <Firebase /> */}
     </div>
   );
 }

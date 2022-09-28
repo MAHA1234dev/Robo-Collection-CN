@@ -6,18 +6,18 @@ const BpIcon = styled('span')(({ theme }) => ({
     borderRadius: "3px",
     width: 16,
     height: 16,
-     backgroundImage:
-        theme.palette.mode === 'dark'
-            ? 'linear-gradient(180deg,hsla(0,0%,100%,.05),hsla(0,0%,100%,0))'
-            : 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
-    '.Mui-focusVisible &': {
-        outline: '4px auto rgba(19,124,189,.6)',
-        outlineOffset: 2,
-    },
+    // backgroundImage:
+    //     theme.palette.mode === 'dark'
+    //         ? 'linear-gradient(180deg,hsla(0,0%,100%,.05),hsla(0,0%,100%,0))'
+    //         : 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
+    // '.Mui-focusVisible &': {
+    //     outline: '4px auto rgba(19,124,189,.6)',
+    //     outlineOffset: 2,
+    // },
 }));
 
 const BpCheckedIcon = styled(BpIcon)({
-    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
+    // backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
     '&:before': {
         display: 'block',
         width: 14,
@@ -59,12 +59,15 @@ function BpCheckbox(props) {
     const [actionsData, setActionsData] = React.useState([])
     const [isChecked, setIsChecked] = useState(false)
     const [id, setId] = useState('')
+
     const handleClick = (id) => {
         setId(id)
     }
+
     useEffect(() => {
         setActionsData(actions)
     }, [])
+
     return (
         <div>
             {actionsData.map((val, index) => {
@@ -73,13 +76,12 @@ function BpCheckbox(props) {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    style={{ marginLeft: "-10px", paddingLeft:"35px",backgroundColor:"unset" }}
+                                    style={{ marginLeft: "-10px", paddingLeft: "35px", backgroundColor: "unset" }}
                                     disableRipple
                                     checkedIcon={<BpCheckedIcon />}
                                     icon={<BpIcon />}
-                                    inputProps={{ 'aria-label': 'Checkbox demo',}}
+                                    inputProps={{ 'aria-label': 'Checkbox demo', }}
                                     {...props}
-                                    
                                     onClick={() => handleClick(index)}
                                 />
                             }
@@ -87,15 +89,11 @@ function BpCheckbox(props) {
                             checked={`${id === index ? isChecked : ""}`}
                             value={val.name}
                         >
-
                         </FormControlLabel>
                     </>
                 )
             })}
-
         </div>
-
-
     );
 }
 

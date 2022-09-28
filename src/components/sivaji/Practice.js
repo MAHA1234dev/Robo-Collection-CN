@@ -21,21 +21,21 @@ function Practice() {
 
     const [indexVlaue, setIndexValue] = useState([]);
     const [data, setData] = useState([])
+
     useEffect(() => {
         setData(object)
     }, [])
+
     const handleClick = (ele, ind) => {
         setIndexValue([...indexVlaue, ind])
-        // if(index.includes(ind)){
-        //     index.splice(ind, 0)
-        // }
+        
+        /* forenable the input field */
+        if (indexVlaue.includes(ind)) {
+            setIndexValue([])
+        } 
+
     }
-    useState(() => {
-        axios.get('https://www.cloudflare.com/cdn-cgi/trace').then((res) => {
-            // console.log(res.data.slice(34,50));
-            // console.log(res, "res");
-        })
-    }, [])
+
     return (
         <div>
             <>
@@ -45,7 +45,7 @@ function Practice() {
                             <input type='text'
                                 disabled={indexVlaue.includes(ind)}
                             />
-                            <button onClick={() => handleClick(ele, ind)} >click </button>
+                            <button onClick={() => handleClick(ele, ind)} >click</button>
                         </div>
                     })
                 }
