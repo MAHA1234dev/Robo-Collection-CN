@@ -11,23 +11,24 @@ import SearchDropdown from './components/SearchDropDown';
 import DetailsTable from './components/tables/DetailsTable';
 import ColumnsGroupingTable from './components/tables/ColumnsGroupingTable';
 import Firebase from './components/firebase';
+import TableSort from './components/SortComponent';
 // import HtmlDropDown from './components/dropdownwithicon/htmlDropdown';
 
 function App() {
   return (
     <div className='App'>
       {/* <header>
-          <div id="logo">
-            <span className="icon">date_range</span>  
-            <span>
-              react<b>calendar</b>
-            </span>
-          </div>
-        </header>
-        <main>
-          <CustomCalendar/>
-        </main> */}
-      <DigitalCollectionExecutiopnDetails />
+        <div id="logo">
+          <span className="icon">date_range</span>
+          <span>
+            react<b>calendar</b>
+          </span>
+        </div>
+      </header> */}
+      <main>
+        {/* <CustomCalendar/> */}
+      </main>
+      {/* <DigitalCollectionExecutiopnDetails /> */}
       {/* <HtmlDropDown /> */}
       {/* <Practice/> */}
       {/* <Events/> */}
@@ -39,6 +40,7 @@ function App() {
       {/* <DetailsTable/> */}
       {/* <ColumnsGroupingTable/> */}
       {/* <Firebase /> */}
+      {/* <TableSort /> */}
     </div>
   );
 }
