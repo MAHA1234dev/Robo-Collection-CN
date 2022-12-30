@@ -12,6 +12,8 @@ import DetailsTable from './components/tables/DetailsTable';
 import ColumnsGroupingTable from './components/tables/ColumnsGroupingTable';
 import Firebase from './components/firebase';
 import TableSort from './components/SortComponent';
+import MapAccordion from './components/accordion/MapAccordion';
+import ReactGanttChart from './components/reqactganttchart';
 // import HtmlDropDown from './components/dropdownwithicon/htmlDropdown';
 
 function App() {
@@ -25,10 +27,10 @@ function App() {
           </span>
         </div>
       </header> */}
-      <main>
-        {/* <CustomCalendar/> */}
-      </main>
-      {/* <DigitalCollectionExecutiopnDetails /> */}
+      {/* <main>
+        <CustomCalendar/>
+      </main> */}
+      <DigitalCollectionExecutiopnDetails />
       {/* <HtmlDropDown /> */}
       {/* <Practice/> */}
       {/* <Events/> */}
@@ -41,6 +43,8 @@ function App() {
       {/* <ColumnsGroupingTable/> */}
       {/* <Firebase /> */}
       {/* <TableSort /> */}
+      {/* <MapAccordion/> */}
+      <ReactGanttChart />
     </div>
   );
 }
