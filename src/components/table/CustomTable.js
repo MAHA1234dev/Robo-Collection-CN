@@ -145,7 +145,6 @@ export default function CustomTable() {
                         }}
                     >
                         {columnItem[0] === "actions" ? (
-
                             <Button onClick={() => handleClick(item)}>
                                 <EditIcon />
                             </Button>

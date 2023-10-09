@@ -2,7 +2,6 @@ import DigitalCollectionExecutiopnDetails from './components/DigitalCollectionEx
 import Events from './components/eventcalender/Calender';
 import Practice from './components/sivaji/Practice';
 import CustomCalendar from './components/customCalendar/CustomCalendar'
-
 import './App.css'
 import AccordionMuI from './components/AccordionMuI';
 import CustomTable from './components/table/CustomTable';
@@ -44,7 +43,7 @@ function App() {
       {/* <Firebase /> */}
       {/* <TableSort /> */}
       {/* <MapAccordion/> */}
-      <ReactGanttChart />
+      {/* <ReactGanttChart /> */}
     </div>
   );
 }

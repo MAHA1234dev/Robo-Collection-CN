@@ -200,15 +200,19 @@ export default function CastomCalendar() {
 
         </div>;
     }
+
     const onDateClick = (day) => {
         setSelectedDate(day)
     }
+
     const nextMonth = () => {
         setCurrentMonth(addDays(currentMonth, 1))
     }
+    
     const prevMonth = () => {
         setCurrentMonth(addDays(currentMonth, -1))
     }
+    
     return (
         <div className="calendar">
             {renderHeader()}
